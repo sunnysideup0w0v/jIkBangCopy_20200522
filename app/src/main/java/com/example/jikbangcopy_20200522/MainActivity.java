@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity {
     public void setValues() {
         addRooms();
         mRoomAdapter = new RoomAdapter(mContext,R.layout.room_list_item,rooms);
-        binding.roomListView.setAdapter(mRoomAdapter); // 데이터 목록 추가, 어댑터 생성 및 리스트 뷰 연ㄹ결
+        binding.roomListView.setAdapter(mRoomAdapter);
     }
     void addRooms(){
         rooms.add(new Room(7500, "은평구 불광동", 4, "불광동에 위치한 주택입니다."));

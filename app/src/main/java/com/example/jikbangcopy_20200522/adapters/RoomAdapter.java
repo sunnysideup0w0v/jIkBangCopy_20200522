@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,6 +34,12 @@ public class RoomAdapter extends ArrayAdapter<Room> {
         if(row == null){
             row = inf.inflate(R.layout.room_list_item, null);
         }
+        TextView priceTxt = row.findViewById(R.id.priceTxt);
+        TextView addressAndFloorTxt = row.findViewById(R.id.addressAndFloorTxt);
+        TextView descTxt = row.findViewById(R.id.descTxt);
+        Room data = mList.get(position);
+        descTxt.setText(data.getDesc());
+
         return row;
     }
 }
