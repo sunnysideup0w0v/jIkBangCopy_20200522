@@ -1,6 +1,8 @@
 package com.example.jikbangcopy_20200522.datas;
 
-public class Room {
+import java.io.Serializable;
+
+public class Room implements Serializable {
     private int price; // 만원단위로 기록. 15000 > 1억 5천
     private String address;  // 구와 동
     private int floor; // 층수 => 양수: 층수. 0 => 반지하 -2 => 지하2층

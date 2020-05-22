@@ -6,9 +6,13 @@ import android.view.View;
 import androidx.databinding.DataBindingUtil;
 
 import com.example.jikbangcopy_20200522.databinding.ActivityDetailRoomBinding;
+import com.example.jikbangcopy_20200522.datas.Room;
 
 public class DetailRoomActivity extends BaseActivity {
     ActivityDetailRoomBinding binding;
+    // 이 화면에 전체적으로 사용할 방 객체.
+    Room mRoom;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +33,10 @@ public class DetailRoomActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-
+        mRoom = (Room) getIntent().getSerializableExtra("room");
+        binding.priceTxt.setText(mRoom.getFormatted());
+        binding.descTxt.setText(mRoom.getDesc());
+        binding.addressTxt.setText(mRoom.getAddress());
+        binding.floorTxt.setText(mRoom.getFormattedFloor());
     }
 }
