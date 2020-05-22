@@ -1,6 +1,7 @@
 package com.example.jikbangcopy_20200522;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
@@ -18,7 +19,12 @@ public class DetailRoomActivity extends BaseActivity {
 
     @Override
     public void SetupEvents() {
-
+        binding.closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
