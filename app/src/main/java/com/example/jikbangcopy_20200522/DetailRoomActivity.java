@@ -1,5 +1,7 @@
 package com.example.jikbangcopy_20200522;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -27,6 +29,15 @@ public class DetailRoomActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        binding.dialBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String telNum = binding.phoneNumTxt.getText().toString();
+                Uri myUri = Uri.parse(String.format("tel:%s",telNum));
+                Intent myIntent = new Intent(Intent.ACTION_DIAL,myUri);
+                startActivity(myIntent);
             }
         });
     }
