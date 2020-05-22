@@ -38,6 +38,14 @@ public class MainActivity extends BaseActivity {
                 startActivity(myIntent);
             }
         });
+        binding.roomListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                rooms.remove(position);
+                mRoomAdapter.notifyDataSetChanged();
+                return true;
+            }
+        });
     }
 
     @Override
