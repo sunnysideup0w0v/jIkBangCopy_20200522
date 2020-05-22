@@ -4,12 +4,13 @@ public class Room {
     private int price; // 만원단위로 기록. 15000 > 1억 5천
     private String address;  // 구와 동
     private int floor; // 층수 => 양수: 층수. 0 => 반지하 -2 => 지하2층
+    private String desc;
 
-
-    public Room(int price, String address, int floor) {
+    public Room(int price, String address, int floor, String desc) {
         this.price = price;
         this.address = address;
         this.floor = floor;
+        this.desc = desc;
     }
 
     public int getPrice() {
@@ -34,5 +35,13 @@ public class Room {
 
     public void setFloor(int floor) {
         this.floor = floor;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }
