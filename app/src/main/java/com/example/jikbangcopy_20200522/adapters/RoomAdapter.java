@@ -40,6 +40,7 @@ public class RoomAdapter extends ArrayAdapter<Room> {
         Room data = mList.get(position);
         descTxt.setText(data.getDesc());
         priceTxt.setText(data.getFormatted());
+        addressAndFloorTxt.setText(String.format("%s, %s",data.getAddress(),data.getFormattedFloor()));
 
         return row;
     }

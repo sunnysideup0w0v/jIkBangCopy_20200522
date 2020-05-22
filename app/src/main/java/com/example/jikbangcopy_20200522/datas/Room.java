@@ -6,6 +6,17 @@ public class Room {
     private int floor; // 층수 => 양수: 층수. 0 => 반지하 -2 => 지하2층
     private String desc;
 
+    public String getFormattedFloor(){
+        if(this.floor>0){
+            return this.floor+"층";
+        } else if (this.floor<0){
+            return String.format("지하 %d층",-this.floor);
+        } else {
+            return "반지하";
+        }
+    }
+
+
     public String getFormatted() {
         if(price<10000){
             // 1,000 2,000
