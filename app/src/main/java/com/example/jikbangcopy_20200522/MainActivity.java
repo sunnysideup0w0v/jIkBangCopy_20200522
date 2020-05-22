@@ -1,15 +1,13 @@
 package com.example.jikbangcopy_20200522;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
+
+import androidx.databinding.DataBindingUtil;
 
 import com.example.jikbangcopy_20200522.adapters.RoomAdapter;
 import com.example.jikbangcopy_20200522.databinding.ActivityMainBinding;
 import com.example.jikbangcopy_20200522.datas.Room;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
