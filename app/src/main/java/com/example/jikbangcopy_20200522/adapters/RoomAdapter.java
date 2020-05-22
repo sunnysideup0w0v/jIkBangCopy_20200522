@@ -39,6 +39,7 @@ public class RoomAdapter extends ArrayAdapter<Room> {
         TextView descTxt = row.findViewById(R.id.descTxt);
         Room data = mList.get(position);
         descTxt.setText(data.getDesc());
+        priceTxt.setText(data.getFormatted());
 
         return row;
     }

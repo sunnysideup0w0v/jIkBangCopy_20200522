@@ -6,6 +6,17 @@ public class Room {
     private int floor; // 층수 => 양수: 층수. 0 => 반지하 -2 => 지하2층
     private String desc;
 
+    public String getFormatted() {
+        if(price<10000){
+            // 1,000 2,000
+            return String.format("%,d",this.price);
+
+        } else {
+            //2억 8,500과 같이 가공
+            return String.format("%d억 %,d",(this.price/10000),(this.price%10000));
+        }
+    }
+
     public Room(int price, String address, int floor, String desc) {
         this.price = price;
         this.address = address;
